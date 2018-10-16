@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Contacto{% endblock %}
-{% block content%}
 
+{% block content%}
 	{% csrf_token %}
-	 <table>
+	<table>
     {{ form.as_table }}   
 	</table>
 {% endblock %}
