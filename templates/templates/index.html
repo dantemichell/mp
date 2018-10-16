@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Inicio{% endblock %}
 {% block content%}
 
 	<div class="col-xs-12 col-md-6 first-md cuadro_izq">
@@ -9,11 +11,11 @@
 		Rescatamos perros en situacion de peligro y/o abandono. los
 		rehabilitamos y los  preparamos para buscarles un hogar.
 		</p>
-		<img src="img/rescate.jpg" alt="perrito">
+		<img src="{% static 'img/rescate.jpg' %}" alt="perrito">
 	</div>
 
 	<div class="col-xs-12 col-md-6 between-xs cuadro_der">
-			<img src="img/crowfunding.jpg" alt="comida perro">
+			<img src="{% static 'img/crowfunding.jpg' %}" alt="comida perro">
 			<h1 class="titulo_entrada">Crowdfunding</h1>
 			<h2 class="subtit">financiamiento </h2>
 			<hr class="linea">
