@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from itertools import cycle
+from django.core.exceptions import ValidationError
 
 tipo_vivienda = (
 	('Patio grande','Patio grande'),
@@ -27,4 +29,4 @@ class Contacto(models.Model):
                 return self.nombre + ' ' +self.apellido        
                    
 	
-        
+                

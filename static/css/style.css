@@ -148,7 +148,10 @@ footer{
     color: black;
 }
 
-
+.principal{
+	padding:15px;
+	
+}
 
 /*PERSONALIZACION DE LA GALERIA */
 
@@ -231,21 +234,3 @@ footer{
   background: white;
 }
 
-
-		  
-/* probando css formulraio*/
-
-#formulario1 input{
-    width: 95%;
-}
-
-
-
-#formulario1{
-    margin-top: 20px;
-    margin-bottom: 20px;    
-    border-radius: 5px;
-    text-align: center;
-    color: black;
-    padding-top: 20px;
-}

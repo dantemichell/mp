@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="{% static 'css/flickity.css' %}" media="screen">
         <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
-		 <script src="{% static 'js/flickity.pkgd.js' %}"></script>
-
+		<script src="{% static 'js/flickity.pkgd.js' %}"></script>
+		{% block extra_head %}{% endblock %}
     </head>
     <body>
 		<div id="principal" class="container">
