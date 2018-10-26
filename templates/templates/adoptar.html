@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Adoptar{% endblock %}
+
+{% block content%}
+	<DIV id="formulario1">
+		<form method="POST" class="post-form" >
+			{% csrf_token %}
+			{{ form.as_p }}  
+		<button type="submit" id="btnEnviar" class="save btn btn-default">Enviar</button>
+		</form>
+	</DIV>
+{% endblock %}
