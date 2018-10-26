@@ -1,5 +1,6 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render , redirect, get_object_or_404
 from .forms import AdoptForm
+from . models import Mascota
 
 def adopt(request):
     if request.method =="POST":
@@ -7,7 +8,11 @@ def adopt(request):
         if form.is_valid():
             Mascota = form.save(commit=True)
             Mascota.save()
-            return redirect('/admin/')
+            return redirect('/galeria/')
     else:
         form = AdoptForm()
     return render(request, 'templates/adoptar.html', {'form': form})
+
+def galeria(request):
+    mas = Mascota.objects.filter(estado='r').order_by('-nombre')
+    return render(request, 'templates/galeria.html', {'posts': mas} )

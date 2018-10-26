@@ -1,0 +1,21 @@
+/*POST LIST.HTML*/
+.articlebox {
+	background-color:white;
+	width:150px;
+	height:250px;
+	border: solid 1px gray;
+	display:inline-block;
+	padding:0px;
+
+}
+.articlebox .nombre{
+	color:green;
+	font-family:Century Gothic;
+	font-size:20px;
+	text-align:left;
+	border-bottom:solid 1px gray;
+	width:100%;
+	left:0px;
+	word-wrap:break-all;
+	font-weight:bold;
+}

@@ -8,9 +8,12 @@ class AdoptForm(forms.ModelForm):
         fields = [
             'nombre',
             'fecNac',
+			'raza',
             'imagen1',
             'sexo',
             'tamaño',
+			'estado',
+			'descripcion'
 
             ]
         
