@@ -19,3 +19,4 @@ def mostrar_contacto(request):
 	
 def index(request):
     return render(request, 'templates/index.html', {})
+
