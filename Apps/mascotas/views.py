@@ -15,4 +15,8 @@ def adopt(request):
 
 def galeria(request):
     mas = Mascota.objects.filter(estado='r').order_by('-nombre')
-    return render(request, 'templates/galeria.html', {'posts': mas} )
+    return render(request, 'templates/galeria.html', {'posts': mas} 
+
+
+def adoptar(request):
+    return render(request, 'templates/galeria.htm',{})

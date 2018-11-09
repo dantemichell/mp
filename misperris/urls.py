@@ -3,6 +3,7 @@ from rest_framework import routers
 from Apps.usuario import views
 from django.contrib import admin
 from . import views
+
 '''
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
