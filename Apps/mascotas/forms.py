@@ -17,3 +17,13 @@ class AdoptForm(forms.ModelForm):
 
             ]
         
+
+		
+class AdoptingForm(forms.ModelForm):
+
+    class Meta:
+        model = Mascota
+        fields = [            
+			'estado',			
+            ]
+        
