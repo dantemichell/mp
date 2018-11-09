@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'social.apps.django_app.default', 'social_django',
+
     'Apps.contacto',
     'Apps.mascotas',
     'Apps.usuario',
@@ -134,5 +136,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
 MEDIA_ROOT= os.path.join(BASE_DIR, '')
 MEDIA_URL = '/'
+
+AUTHENTICATION_BACKENDS = [
+    'social.backends.facebook.FacebookAppOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_FACEBOOK_KEY = '280920782629430'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'd684b168e8688586ad3fafc4fcc2ad27'
+
+
