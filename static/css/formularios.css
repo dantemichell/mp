@@ -1,22 +1,28 @@
 /* probando css formulraio*/
 
-#formulario input,select,textarea{
-    width: 100%;
+#formulario input,textarea{
+    width: 90%;
 	right:0px;
 	text-align:left;
 	display: inline-block;
 	height:20px;
 	margin:0 auto;
 	resize: none;
+	border-radius:0px;
+	border:1px solid gray;
+	padding:5px 5px 5px 5px;
+	border-bottom:5px solid green;
 }
-textarea {
-	height:200px;
+#formulario textarea {
+	height:150px;
 }
 
 #formulario .fn {
 	text-align:right;
 	border-right:0px solid black;
-	font-size:20px;
+	font-size:16px;
+	line-height:30px;
+	vertical-align:middle;
 }
 #formulario div {
 	margin:0 auto;
@@ -39,23 +45,15 @@ textarea {
 	position:relative;
 	margin:0 auto;
 }
-.cj {
-	background-color: tomato;
-    padding: 5px;
-    width: 20px;
-    height: 20px;
-    margin: 10px;
-    line-height: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 2em;
-    text-align: center;
-}
 
 #enviar {
 	width:50%;
 	height:35px;
 	margin:20px;
+	border: 1px solid green;
+	color:green;
+	background-color:white;
+	border-radius:5px;
 	
 }
 
@@ -63,10 +61,19 @@ textarea {
 	color:white;
 	font-size:12px;
 	background-color:red;
-	
+	padding:5px 0px 5px 0px;
 }
 
-.fnac select {
-	width:33%;
+
+#id_tipovivienda, #id_sexo, #id_tamaño,#id_estado{
+	width:94%;
+
 	
+}
+#id_fecha_nacimiento_month, #id_fecha_nacimiento_day, #id_fecha_nacimiento_year {
+	width:30%;
+	
+}
+#id_fecha_nacimiento_day{
+	margin: 0px 5px 0px 5px;
 }

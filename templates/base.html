@@ -5,59 +5,51 @@
 		<title>Mis Perris - {% block title %}{% endblock %}</title>
         <meta charset="UTF-8"> 
 		<link rel="stylesheet" href="{% static 'css/flexboxgrid.css' %}" type="text/css">
-		<link rel="stylesheet" href="{% static 'css/flickity.css' %}" media="screen">
         <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-
-		<script src="{% static 'js/flickity.pkgd.js' %}"></script>
 		{% block extra_head %}{% endblock %}
     </head>
     <body>
 		<div id="principal" class="container">
-			<div class=""></div>
-			
-			<div id ="header-1" class="row">
+			<div id ="header-1" >
+			<div class="row">
 				<div id="logo" class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
 					<a href="{% url 'index' %}"><img src="{% static 'Img/logo.png' %}" alt="Mis Perris - Inicio"></a>
-				</div>     
-				<div id="links" class="row col-xs-12 col-sm-6 col-md-7 col-lg-8">
+				</div>
+				<div class="col-xs-12 col-sm-3 col-md-4 col-lg-5">
+					
+				</div>
+				<div id="sesion" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<span>
+					{% if user.is_authenticated %}
+						Bienvenido, {{user.username}} - Cerrar Sesión
+					{% else %}
+						Registrarse - Iniciar sesión
+					{% endif  %}
+					
+					
+					
+					
+					</span>
+				</div>
+			</div>
+			<div class ="row">
+				<div id="links" class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="op col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="{% url 'index' %}">Quienes somos</a></div>
 					<div class="op col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="{% url 'galeria' %}" >Galería</a></div>
 					<div class="op col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="{% url 'adoptar' %}" >Adopción</a></div>
 					<div class="op col-xs-3 col-sm-3 col-md-3 col-lg-3"> <a href="{% url 'contacto' %}" >Contacto</a></div>
 				</div>
-			</div>   
-			<div id="header-2" class="row">         
-				<div class="carousel js-flickity" data-flickity='{ "autoPlay": 2000 }'>
-					<div class="gallery-cell ibg3" style="background-image: url('{% static 'Img/adoptados/Duque.jpg' %}')"></div>
-					<div class="gallery-cell ibg1" style="background-image: url('{% static 'Img/adoptados/Apolo.jpg' %}')"></div>
-					<div class="gallery-cell ibg4" style="background-image: url('{% static 'Img/rescatados/Luna.jpg' %}')"></div>
-					<div class="gallery-cell ibg2" style="background-image: url('{% static 'Img/adoptados/Tom.jpg' %}')"></div>
-					<div class="gallery-cell ibg5" style="background-image: url('{% static 'Img/rescatados/Wifi.jpg' %}')"></div>
-				</div>	
-			
 			</div>
-			<div id="header-3" class="row">
-				<div class="op col-xs-6 col-sm-4 first-sm col-md-4 first-md col-lg-4">                         
-					<span>+56 9 98765431</span>                              
-				</div>
-				<div class="op col-xs-12 first-xs col-sm-4  col-md-4 col-lg-4">                    
-				   <span>Rescate y adopcion de perros callejeros</span>                          
-				</div>    
-				<div class="op col-xs-6 col-sm-4 col-md-4 col-lg-4">
-					<a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'img/iconos/Facebook.png' %}" alt="facebook" ></a>
-					<a href="" ><img src="{% static 'img/iconos/Instagram.png' %}" alt="instagram"></a>
-					<a href="" ><img src="{% static 'img/iconos/Twitter.png' %}" alt="twitter"></a>
-					<a href=""><img src="{% static 'img/iconos/Telegram.png' %}" alt="telegram" ></a>
-					<a href="" ><img src="{% static 'img/iconos/Whatsapp.png' %}" alt="whatsapp"></a>
-				</div> 
-			
+
+				
 			</div>
+
+			{% block header %}{% endblock %}
 
 			
             <section class="row principal middle-xs first-xs" id="contenido">   
 
-{% block content %}
-{% endblock %}                                          
+{% block content %}{% endblock %}                                          
             </section>
 
                 <!--footer-->                

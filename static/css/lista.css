@@ -1,21 +1,56 @@
 /*POST LIST.HTML*/
 .articlebox {
 	background-color:white;
-	width:150px;
-	height:250px;
-	border: solid 1px gray;
+	height:340px;
+	border: solid 0px gray;
 	display:inline-block;
 	padding:0px;
-
+	width:90%;
+	height:100%;
+	margin-bottom:500px;
+	
 }
-.articlebox .nombre{
-	color:green;
-	font-family:Century Gothic;
-	font-size:20px;
-	text-align:left;
-	border-bottom:solid 1px gray;
+
+.artex {
+	
+}
+
+.articlebox .nom{
+	color:white;
+	background-color:green;
 	width:100%;
-	left:0px;
-	word-wrap:break-all;
-	font-weight:bold;
+	font-size:16px;
+	text-align:center;
+	border-radius:5px 5px 0px 0px;
+	padding:3px 0px 3px 0px;
+}
+
+.articlebox .adoptar{
+	width:50%;
+	background-color:white;
+	border: solid 1px green;
+	padding:3px;
+	text-align:center;
+	margin: 0 auto;
+	text-transform:uppercase;
+	font-size:8px;
+	border-radius:5px;
+}
+.articlebox .adoptar {
+	color:green;
+}
+
+.articlebox .adoptar:hover {
+	border-color:black;
+	color:black;
+}
+
+
+.info {
+	border:0px solid red;
+}
+
+.articlebox .info {
+	color:gray;
+	font-size:12px;
 }

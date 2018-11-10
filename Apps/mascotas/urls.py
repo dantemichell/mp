@@ -8,7 +8,7 @@ urlpatterns = [
         url(r'^adoptar/', views.adopt,name='adoptar'),
 		url(r'^galeria/', views.galeria,name='galeria'),
 		url(r'^gracias/', views.gracias,name='gracias'),
-		url(r'^perrito/(?P<id>[0-9]+)/$', views.adoptar,name='adoptar'),
+		url(r'^perrito/(?P<id>[0-9]+)/$', views.adoptar,name='adoptarperrito'),
 	] 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

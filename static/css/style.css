@@ -15,7 +15,8 @@ div {
 }
 
 #header-1{
-
+	position:relative;
+	background-color:black;
 }
 
 #header-1 #logo {
@@ -36,7 +37,7 @@ div {
     background-color: #82d6b7;
 	font-size:14px;
 	vertical-align:middle;
-	line-height:100px;
+	line-height:40px;
 	white-space: nowrap;
 	overflow: hidden;
 }
@@ -49,6 +50,28 @@ div {
 	display: block;
 	
 }
+
+#header-1 #sesion{
+	background-color:black;
+	
+	border: 0px dotted limegreen;
+	text-align: center;
+	font-size:14px;
+	height:50px;
+	line-height:50px;
+	white-space: nowrap;
+	overflow: hidden;
+	position:relative;	
+}
+
+#header-1 #sesion span{
+	position:absolute;
+	right:10px;
+	bottom:0px;
+	color:white;
+}
+
+
 #header-2{
     background-color:#6DCCAA;
 	margin-top:0px;
@@ -153,84 +176,33 @@ footer{
 	
 }
 
-/*PERSONALIZACION DE LA GALERIA */
 
-#header-2 img{
-	width:1250px;
-	height:100%;
-	text-align:center;
-	position:inline;
-	margin:auto;
-	overflow: hidden;
+
+/* paginas galeria y formulario */
+
+#formulario .fn {
+	text-align:right;
+	border-right:0px solid black;
+	font-size:20px;
 }
-.ibg1 {
-    overflow: hidden;
-    background-position:35% 35%;
-	background-size: cover;
-}
-.ibg2 {
-    overflow: hidden;
-    background-position:0% 10%;
-	background-size: cover;
-}
-.ibg3 {
-    overflow: hidden;
-    background-position:10% 50%;
-	background-size: cover;
-}
-.ibg4 {
-    overflow: hidden;
-    background-position:35% 75%;
-	background-size: cover;
-}
-.ibg5 {
-    overflow: hidden;
-    background-position:35% 15%;
-	background-size: cover;
+#formulario div {
+	margin:0 auto;
 }
 
-.gallery-cell {
-  width: 100%;
-  height: 400px;
-  margin-right: 10px;
-  counter-increment: gallery-cell;
+
+#formulario .row {
+	margin-top:10px;
 }
 
-/* big buttons, no circle */
-.flickity-prev-next-button {
-  width: 100px;
-  height: 100px;
-  background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-  fill: white;
-}
-.flickity-prev-next-button.no-svg {
-  color: white;
-}
-.flickity-prev-next-button:hover {
-  background: transparent;
-}
-/* hide disabled button */
-.flickity-prev-next-button:disabled {
-  display: none;
-}
 
-/* position dots in gallery */
-.flickity-page-dots {
-  bottom: 3px;
+#formulario{
+    margin-top: 20px;
+    margin-bottom: 20px;    
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    padding: 20px 0px 20px 0px;
+	border:1px solid black;
+	position:relative;
+	margin:0 auto;
 }
-/* white circles */
-.flickity-page-dots .dot {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background: transparent;
-  border: 2px solid white;
-}
-/* fill-in selected dot */
-.flickity-page-dots .dot.is-selected {
-  background: white;
-}
-

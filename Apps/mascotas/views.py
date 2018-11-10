@@ -11,7 +11,7 @@ def adopt(request):
             return redirect('/galeria/')
     else:
         form = AdoptForm()
-    return render(request, 'templates/adoptar.html', {'form': form})
+    return render(request, 'templates/adoptform.html', {'form': form})
 
 def galeria(request):
     mas = Mascota.objects.filter(estado='r').order_by('-nombre')
@@ -19,8 +19,8 @@ def galeria(request):
 
 def gracias(request):
     return render(request, 'templates/gracias.html') 
-	
-	
+
+
 def adoptar(request, id):
     perrito =  get_object_or_404(Mascota,id=id)
     form = AdoptingForm(request.POST or None, instance = perrito)
