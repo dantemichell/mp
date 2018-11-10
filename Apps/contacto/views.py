@@ -16,7 +16,3 @@ def contacto(request):
 def mostrar_contacto(request):
 	mc = Contacto.objects.order_by()
 	return render(request,'templates/mostrar-mensaje-contacto.html', {'posts': mc})
-	
-def index(request):
-    return render(request, 'templates/index.html', {})
-

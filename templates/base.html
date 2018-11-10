@@ -19,11 +19,11 @@
 					
 				</div>
 				<div id="sesion" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-					<span>
+					<span style="font-size:10px;">
 					{% if user.is_authenticated %}
-						Bienvenido, {{user.username}} - Cerrar Sesión
+						Bienvenido, <b>{{user.username}}</b> - <a href="{% url 'settings' %}"> Ajustes </a> - <a href="{% url 'logout' %}"> Salir </a>
 					{% else %}
-						Registrarse - Iniciar sesión
+						<a href="{% url 'login' %}"> Registrarse o Iniciar sesión</a>
 					{% endif  %}
 					
 					

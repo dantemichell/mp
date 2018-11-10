@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Contacto{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/formularios.css' %}"/>
+{% endblock %}
+{% block content%}
+	<DIV id="formulario" class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
+		<h2>Login</h2>
+		  <form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Login</button>
+		  </form>
+		  <br>
+		  <p><strong>-- OR --</strong></p>
+		  <a href="{% url 'social:begin' 'github' %}">Ingresar con Github</a><br>
+		  <a href="{% url 'social:begin' 'facebook' %}">Ingresar con Facebook</a><br>
+	</DIV>
+{% endblock %}

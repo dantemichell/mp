@@ -43,12 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'social.apps.django_app.default', 'social_django',
-
+	'social.apps.django_app.default',
+	'social_django',
     'Apps.contacto',
     'Apps.mascotas',
     'Apps.usuario',
     'rest_framework',
+
 	
 ]
 
@@ -63,8 +64,10 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+	'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'misperris.urls'
@@ -80,6 +83,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+				'social_django.context_processors.backends',
+				'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -142,13 +147,22 @@ MEDIA_ROOT= os.path.join(BASE_DIR, '')
 MEDIA_URL = '/'
 
 AUTHENTICATION_BACKENDS = [
-    'social.backends.facebook.FacebookAppOAuth2',
-    'social.backends.facebook.FacebookOAuth2',
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
 SOCIAL_AUTH_FACEBOOK_KEY = '280920782629430'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'd684b168e8688586ad3fafc4fcc2ad27'
+SOCIAL_AUTH_GITHUB_KEY = 'df8f4dee3108997dc2be'
+SOCIAL_AUTH_GITHUB_SECRET = '2a46cc74d6bbd3e202d972ddca6fc3c2e28e333a'
 
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/settings/'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/settings/'
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
 
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'index'
