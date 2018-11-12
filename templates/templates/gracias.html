@@ -1,1 +1,13 @@
-gracias
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Gracias{% endblock %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/lista.css' %}"/>
+{% endblock %}
+{% block content%}
+	<DIV id="formulario" class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+		<div class="row">
+			<h1>Gracias!</h1>
+		</div>		
+	</DIV>
+{% endblock %}

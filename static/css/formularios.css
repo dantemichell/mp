@@ -70,10 +70,10 @@
 
 	
 }
-#id_fecha_nacimiento_month, #id_fecha_nacimiento_day, #id_fecha_nacimiento_year {
+#id_fecha_nacimiento_month, #id_fecha_nacimiento_day, #id_fecha_nacimiento_year, #id_fecNac_month,#id_fecNac_day,#id_fecNac_year  {
 	width:30%;
 	
 }
-#id_fecha_nacimiento_day{
+#id_fecha_nacimiento_day, #id_fecNac_day {
 	margin: 0px 5px 0px 5px;
 }

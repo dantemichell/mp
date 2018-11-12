@@ -6,23 +6,25 @@
 {% endblock %}
 {% block content%}
 	<DIV id="formulario" class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
-		<form method="POST" class="post-form" enctype="multipart/form-data" >
-			{% csrf_token %}
-			{% if user.is_authenticated %}
-			<div class="row col-lg-12">
+		<div class="row col-lg-12">
 				<div style="background-image:url('{{perrito.imagen1.url}}'); width:40%;padding-bottom:40%;overflow: hidden;background-position:35% 35%;
 	background-size: cover;border-radius:100%">
 				
 				
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		</div>
+		{% if perrito.estado == 'r' or perrito.estado == 'd'%}
+		<form method="POST" class="post-form" enctype="multipart/form-data" >
+		
+			{% csrf_token %}
+			{% if user.is_authenticated %}
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<br>
 					<span>Utiliza el siguiente formulario para adoptar a <b>{{perrito.nombre}}</b>.</span>
 					<br><br><br>
 				</div>
-			</div>
 			<div class="row col-lg-12">
-				<div class="fn col-xs-6 col-sm-6 col-md-6 col-lg-6">Estado</div>
+				<div class="fn col-xs-6 col-sm-6 col-md-6 col-lg-6">Adoptar:</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">{{form.estado}}</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					{{form.estado.errors}}
@@ -40,11 +42,6 @@
 			
 			{% else %}
 			<div class="row col-lg-12">
-				<div style="background-image:url('{{perrito.imagen1.url}}'); width:40%;padding-bottom:40%;overflow: hidden;background-position:35% 35%;
-	background-size: cover;border-radius:100%">
-				
-				
-				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<br>
 					<span>Necesitas iniciar sesión para adoptar a <b>{{perrito.nombre}}</b>.</span>
@@ -57,5 +54,9 @@
 			
 			
 		</form>
+		{% else %}
+			Perrito adoptado y feliz :)
+		{% endif %}
+	
 	</DIV>
 {% endblock %}

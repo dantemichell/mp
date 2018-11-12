@@ -24,10 +24,10 @@ def gracias(request):
 def adoptar(request, id):
     perrito =  get_object_or_404(Mascota,id=id)
     form = AdoptingForm(request.POST or None, instance = perrito)
-    if form.is_valid():            
+    if form.is_valid():
         x = form.save(commit=True)
         x.save()
-        return redirect('/gracias/')
+        return redirect('gracias')
     else:
         form = AdoptingForm()
     return render(request, 'templates/perrito.html', {'form': form, 'perrito':perrito})

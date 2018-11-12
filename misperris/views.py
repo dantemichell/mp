@@ -41,10 +41,10 @@ def password(request):
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, form.user)
-            messages.success(request, 'Your password was successfully updated!')
+            messages.success(request, 'Tu contraseña ha sido actualizada exitosamente!')
             return redirect('password')
         else:
-            messages.error(request, 'Please correct the error below.')
+            messages.error(request, 'Por favor, corrige los errores.')
     else:
         form = PasswordForm(request.user)
     return render(request, 'templates/password.html', {'form': form})

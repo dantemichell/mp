@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% block title %}Contacto{% endblock %}
+{% block title %}Login{% endblock %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'css/formularios.css' %}"/>
 {% endblock %}
@@ -11,10 +11,10 @@
 			{% csrf_token %}
 			{{ form.as_p }}
 			<button type="submit">Login</button>
-		  </form>
-		  <br>
-		  <p><strong>-- OR --</strong></p>
-		  <a href="{% url 'social:begin' 'github' %}">Ingresar con Github</a><br>
-		  <a href="{% url 'social:begin' 'facebook' %}">Ingresar con Facebook</a><br>
+		</form>
+		<br>
+		<br>
+		<a href="{% url 'social:begin' 'github' %}">Ingresar con Github</a><br>
+		<a href="{% url 'social:begin' 'facebook' %}">Ingresar con Facebook</a><br>
 	</DIV>
 {% endblock %}

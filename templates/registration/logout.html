@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Salir{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/formularios.css' %}"/>
+{% endblock %}
+{% block content%}
+	<DIV id="formulario" class="col-xs-10 col-sm-8 col-md-6 col-lg-6">
+		<h2>Salir</h2>
+		Sesión cerrada exitosamente. Gracias por su visita!
+	</DIV>
+{% endblock %}
